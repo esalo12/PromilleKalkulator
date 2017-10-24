@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#e6e0ae"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="no.nord.promillekalkulator.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:paddingTop="20dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Kjønn: " />
+
+        <RadioGroup android:id="@+id/radioGruppe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/mann"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="?android:attr/listChoiceIndicatorSingle"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:text="Mann" />
+
+            <RadioButton android:id="@+id/kvinne"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="right"
+                android:text="Kvinne" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:text="Vekt i kilo: "/>
+            <EditText android:id="@+id/vekt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:inputType="numberDecimal"
+                android:layout_marginTop="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:text="Start tid: "  />
+                <Spinner android:id="@+id/startTid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:text="Stop tid: " />
+                <Spinner android:id="@+id/stopTid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:text="Antall enheter: "
+        android:layout_marginBottom="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="Øl, 0.5l, opptil 4,7%: " />
+
+        <Spinner android:id="@+id/oller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="Vin, 12cl, opptil 15% : " />
+
+        <Spinner android:id="@+id/vin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="Hetvin, 7,5cl, opptil 22% : " />
+
+        <Spinner android:id="@+id/hetvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="Sprit, 4cl, opptil 40%, : " />
+
+        <Spinner android:id="@+id/spritsvak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="Sprit, 4cl, opptil 60%, : " />
+
+        <Spinner android:id="@+id/spritsterk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+    </LinearLayout>
+    <Button android:id="@+id/beregne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="Beregne"/>
+
+</LinearLayout>
